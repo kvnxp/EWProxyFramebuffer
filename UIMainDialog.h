@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface UIMainDialog : NSObject {
 	NSString *imgState;
 	NSString *driverState;
@@ -21,6 +20,7 @@
 	unsigned char *driverbuf;
 	BOOL bufferOn;
 }
+
 @property (nonatomic,retain) NSString *imgState;
 @property (nonatomic,retain) NSString *driverState;
 @property (nonatomic,retain) NSMutableArray *ProfileNames;

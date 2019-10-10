@@ -25,6 +25,10 @@
 
 - (IBAction) fetchImage:(id)sender
 {
+    if (self.bufferOn==NO) {
+        return;
+    }
+    
 	//tell driver to update buffer mapped to client memory
 	int ret=EWProxyFramebufferDriverUpdateMemory(connect);
 	NSLog(@"%x",ret);
@@ -50,9 +54,9 @@
 }
 
 - (int) getMode {
-	int mode=[self.selectedProfile firstIndex];
-	mode++;
-	return mode;
+//    int mode=[self.selectedProfile firstIndex];
+//    mode++;
+    return 1; // mode;
 }
 
 - (IBAction) SwitchDriver:(id)sender
@@ -83,7 +87,7 @@
 
 - (void)awakeFromNib
 {
-	self.driverState=@"UNKNOWN";
+    self.driverState=@"UNKNOWN";
 	//check for driver. if found, set everything up.
 	service=FindEWProxyFramebufferDriver();
 	if(service==IO_OBJECT_NULL)
