@@ -1,7 +1,5 @@
 #!/bin/sh
 
-cp -R ./Release/EWProxyFrameBufferApp.app /Applications/
-
 rm -rf /System/Library/Extensions/EWProxy*
 
 cp -R ./Release/EWProxyFrameBuffer.kext /System/Library/Extensions
