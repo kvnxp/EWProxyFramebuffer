@@ -84,8 +84,9 @@
     if (selectedMode<1 || selectedMode>profileCount) {
         selectedMode = 0;
     }
-    for(int i=0;i<profileCount && i<3;i++)
+    for(int i=0;i<profileCount && i<8;i++)
     {
+      
         NSMenuItem *menuItem = [[self menu] itemAtIndex: i];
         menuItem.title = [ProfileNames objectAtIndex: i];
         menuItem.state = (i == selectedMode-1) ? NSControlStateValueOn : NSControlStateValueOff;
@@ -110,33 +111,33 @@
 }
 
 - (IBAction) SwitchDriver1:(id)sender {
-    if (selectedMode == 1) {
-        selectedMode = 0;
-        [self SwitchDriverOff: sender];
-        return;
-    }
-    selectedMode = 1;
-    [self SwitchDriver: sender];
+//    if (selectedMode == 1) {
+//        selectedMode = 0;
+//        [self SwitchDriverOff: sender];
+//        return;
+//    }
+//    selectedMode = 1;
+//    [self SwitchDriver: sender];
 }
 
 - (IBAction) SwitchDriver2:(id)sender {
-    if (selectedMode == 2) {
-        selectedMode = 0;
-        [self SwitchDriverOff: sender];
-        return;
-    }
-    selectedMode = 2;
-    [self SwitchDriver: sender];
+//    if (selectedMode == 2) {
+//        selectedMode = 0;
+//        [self SwitchDriverOff: sender];
+//        return;
+//    }
+//    selectedMode = 2;
+//    [self SwitchDriver: sender];
 }
 
 - (IBAction) SwitchDriver3:(id)sender {
-    if (selectedMode == 3) {
-        selectedMode = 0;
-        [self SwitchDriverOff: sender];
-        return;
-    }
-    selectedMode = 3;
-    [self SwitchDriver: sender];
+//    if (selectedMode == 3) {
+//        selectedMode = 0;
+//        [self SwitchDriverOff: sender];
+//        return;
+//    }
+//    selectedMode = 3;
+//    [self SwitchDriver: sender];
 }
 
 - (IBAction) SwitchDriverOff:(id)sender {
@@ -148,6 +149,19 @@
     [self updateProfiles];
 }
 
+- (void)SwitchDriverRes:(id)sender{
+        
+    @try {
+        NSMenuItem *item = sender;
+        NSString *a = item.identifier;
+        NSLog(a);
+      
+    } @catch (NSException *exception) {
+        NSLog(exception);
+    }
+   
+}
+ 
 - (IBAction) SwitchDriver:(id)sender
 {
     [self SwitchDriverOff: sender];
