@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -652,7 +653,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -684,6 +685,36 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="SwitchDriver3:" target="494" id="i1t-XS-PLe"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="screen profile 4" onStateImage="Check On" offStateImage="Check Off" id="wbA-b6-RmF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="SwitchDriver3:" target="494" id="Qk2-zS-gAZ"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="screen profile 5" onStateImage="Check On" offStateImage="Check Off" id="yb8-QU-p0z">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="SwitchDriver3:" target="494" id="2mj-hk-1Xb"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="screen profile 6" onStateImage="Check On" offStateImage="Check Off" id="LLj-uf-eYV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="SwitchDriver3:" target="494" id="QRr-mT-cB9"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="screen profile 7" onStateImage="Check On" offStateImage="Check Off" id="RUc-bg-chK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="SwitchDriver3:" target="494" id="2PQ-qR-WDg"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="screen profile 8" onStateImage="Check On" offStateImage="Check Off" id="Wkj-Iw-bq7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="SwitchDriver3:" target="494" id="8zN-Jw-AHR"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="ZRf-ty-oV4"/>
