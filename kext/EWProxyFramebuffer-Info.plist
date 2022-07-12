@@ -2,44 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BuildMachineOSBuild</key>
-	<string>18F132</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>EWProxyFrameBuffer</string>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>info.ennowelbers.framebuffer</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>EWProxyFrameBuffer</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleSupportedPlatforms</key>
-	<array>
-		<string>MacOSX</string>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>DTCompiler</key>
-	<string>com.apple.compilers.llvm.clang.1_0</string>
-	<key>DTPlatformBuild</key>
-	<string>10B61</string>
-	<key>DTPlatformVersion</key>
-	<string>GM</string>
-	<key>DTSDKBuild</key>
-	<string>18B71</string>
-	<key>DTSDKName</key>
-	<string>macosx10.14</string>
-	<key>DTXcode</key>
-	<string>1010</string>
-	<key>DTXcodeBuild</key>
-	<string>10B61</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>EWProxyFramebuffer</key>
@@ -64,6 +46,47 @@
 					<key>width</key>
 					<integer>1600</integer>
 				</dict>
+				<dict>
+					<key>height</key>
+					<integer>768</integer>
+					<key>name</key>
+					<string>1366x768</string>
+					<key>width</key>
+					<integer>1366</integer>
+				</dict>
+				<dict>
+					<key>height</key>
+					<integer>768</integer>
+					<key>name</key>
+					<string>1360x768</string>
+					<key>width</key>
+					<integer>1360</integer>
+				</dict>
+				<dict>
+					<key>height</key>
+					<integer>720</integer>
+					<key>name</key>
+					<string>1280x720</string>
+					<key>width</key>
+					<integer>1280</integer>
+				</dict>
+				<dict>
+					<key>height</key>
+					<integer>800</integer>
+					<key>name</key>
+					<string>1280x800</string>
+					<key>width</key>
+					<integer>1280</integer>
+				</dict>
+				<dict>
+					<key>height</key>
+					<integer>540</integer>
+					<key>name</key>
+					<string>960x540</string>
+					<key>width</key>
+					<integer>960</integer>
+				</dict>
+				
 				<dict>
 					<key>height</key>
 					<integer>600</integer>

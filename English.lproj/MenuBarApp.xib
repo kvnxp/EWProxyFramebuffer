@@ -669,52 +669,52 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="Aae-oF-AsY">
             <items>
-                <menuItem title="screen profile 1" onStateImage="Check On" offStateImage="Check Off" id="E8a-Fn-In1">
+                <menuItem title="screen profile 1" onStateImage="Check On" offStateImage="Check Off" tag="1" id="E8a-Fn-In1">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver1:" target="494" id="OMV-sH-ye5"/>
+                        <action selector="SwitchDriverRes:" target="494" id="JtB-RV-EqG"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 2" onStateImage="Check On" offStateImage="Check Off" id="8JB-Pg-tDI">
+                <menuItem title="screen profile 2" onStateImage="Check On" offStateImage="Check Off" tag="2" id="8JB-Pg-tDI">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver2:" target="494" id="79U-Fj-B8s"/>
+                        <action selector="SwitchDriverRes:" target="494" id="CIE-lL-dor"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 3" onStateImage="Check On" offStateImage="Check Off" id="mpG-Pg-YPV">
+                <menuItem title="screen profile 3" onStateImage="Check On" offStateImage="Check Off" tag="3" id="mpG-Pg-YPV">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="i1t-XS-PLe"/>
+                        <action selector="SwitchDriverRes:" target="494" id="m2X-66-p1i"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 4" onStateImage="Check On" offStateImage="Check Off" id="wbA-b6-RmF">
+                <menuItem title="screen profile 4" onStateImage="Check On" offStateImage="Check Off" tag="4" id="wbA-b6-RmF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="Qk2-zS-gAZ"/>
+                        <action selector="SwitchDriverRes:" target="494" id="fxN-V9-ciR"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 5" onStateImage="Check On" offStateImage="Check Off" id="yb8-QU-p0z">
+                <menuItem title="screen profile 5" onStateImage="Check On" offStateImage="Check Off" tag="5" id="yb8-QU-p0z">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="2mj-hk-1Xb"/>
+                        <action selector="SwitchDriverRes:" target="494" id="TlW-Ay-hJl"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 6" onStateImage="Check On" offStateImage="Check Off" id="LLj-uf-eYV">
+                <menuItem title="screen profile 6" onStateImage="Check On" offStateImage="Check Off" tag="6" id="LLj-uf-eYV">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="QRr-mT-cB9"/>
+                        <action selector="SwitchDriverRes:" target="494" id="eQs-1W-s9I"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 7" onStateImage="Check On" offStateImage="Check Off" id="RUc-bg-chK">
+                <menuItem title="screen profile 7" onStateImage="Check On" offStateImage="Check Off" tag="7" id="RUc-bg-chK">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="2PQ-qR-WDg"/>
+                        <action selector="SwitchDriverRes:" target="494" id="omo-lQ-7Es"/>
                     </connections>
                 </menuItem>
-                <menuItem title="screen profile 8" onStateImage="Check On" offStateImage="Check Off" id="Wkj-Iw-bq7">
+                <menuItem title="screen profile 8" onStateImage="Check On" offStateImage="Check Off" tag="8" id="Wkj-Iw-bq7">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="SwitchDriver3:" target="494" id="8zN-Jw-AHR"/>
+                        <action selector="SwitchDriverRes:" target="494" id="uEH-gZ-Fod"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="ZRf-ty-oV4"/>

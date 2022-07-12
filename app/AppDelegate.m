@@ -109,8 +109,8 @@
     NSData *data=[Profiles objectAtIndex:[self.selectedProfile firstIndex]];
     return (EWProxyFramebufferModeInfo*)[data bytes];
 }
-
-- (IBAction) SwitchDriver1:(id)sender {
+//
+//- (IBAction) SwitchDriver1:(id)sender {
 //    if (selectedMode == 1) {
 //        selectedMode = 0;
 //        [self SwitchDriverOff: sender];
@@ -118,27 +118,27 @@
 //    }
 //    selectedMode = 1;
 //    [self SwitchDriver: sender];
-}
-
-- (IBAction) SwitchDriver2:(id)sender {
-//    if (selectedMode == 2) {
-//        selectedMode = 0;
-//        [self SwitchDriverOff: sender];
-//        return;
-//    }
-//    selectedMode = 2;
-//    [self SwitchDriver: sender];
-}
-
-- (IBAction) SwitchDriver3:(id)sender {
-//    if (selectedMode == 3) {
-//        selectedMode = 0;
-//        [self SwitchDriverOff: sender];
-//        return;
-//    }
-//    selectedMode = 3;
-//    [self SwitchDriver: sender];
-}
+//}
+//
+//- (IBAction) SwitchDriver2:(id)sender {
+////    if (selectedMode == 2) {
+////        selectedMode = 0;
+////        [self SwitchDriverOff: sender];
+////        return;
+////    }
+////    selectedMode = 2;
+////    [self SwitchDriver: sender];
+//}
+//
+//- (IBAction) SwitchDriver3:(id)sender {
+////    if (selectedMode == 3) {
+////        selectedMode = 0;
+////        [self SwitchDriverOff: sender];
+////        return;
+////    }
+////    selectedMode = 3;
+////    [self SwitchDriver: sender];
+//}
 
 - (IBAction) SwitchDriverOff:(id)sender {
     int state=EWProxyFramebufferDriverCheckFramebufferState(connect);
@@ -151,14 +151,11 @@
 
 - (void)SwitchDriverRes:(id)sender{
         
-    @try {
         NSMenuItem *item = sender;
-        NSString *a = item.identifier;
-        NSLog(a);
-      
-    } @catch (NSException *exception) {
-        NSLog(exception);
-    }
+        int *tagg = item.tag;
+    EWProxyFramebufferDriverDisableFramebuffer(connect);
+    
+    EWProxyFramebufferDriverEnableFramebuffer(connect, tagg);
    
 }
  
