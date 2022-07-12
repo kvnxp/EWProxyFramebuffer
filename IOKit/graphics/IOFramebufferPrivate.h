@@ -140,7 +140,7 @@
     void dpProcessInterrupt(void);
     void dpUpdateConnect(void);
 	
-    static void handleVBL(IOFramebuffer * inst, void * ref);
+//    static void handleVBL(IOFramebuffer * inst, void * ref);
     static void writePrefs( OSObject * owner, IOTimerEventSource * sender );
     static void connectChangeInterrupt( IOFramebuffer * inst, void * ref );
     static void connectChangeDelayedInterrupt( OSObject * owner, IOTimerEventSource * sender );

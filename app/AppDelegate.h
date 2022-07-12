@@ -26,6 +26,7 @@
 - (IBAction) SwitchDriver2:(id)sender;
 - (IBAction) SwitchDriver3:(id)sender;
 - (IBAction) SwitchDriverOff:(id)sender;
+- (IBAction) SwitchDriverRes:(id)sender;
 
 - (int) getIntForkey:(NSString *)key;
 @end

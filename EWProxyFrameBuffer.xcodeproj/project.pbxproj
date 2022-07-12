@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -24,7 +24,6 @@
 
 /* Begin PBXBuildFile section */
 		32D94FC60562CBF700B6AF17 /* EWProxyFrameBufferDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A224C3EFF42367911CA2CB7 /* EWProxyFrameBufferDriver.h */; };
-		32D94FC80562CBF700B6AF17 /* EWProxyFramebuffer-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* EWProxyFramebuffer-InfoPlist.strings */; };
 		32D94FCA0562CBF700B6AF17 /* EWProxyFrameBufferDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3FFF42367911CA2CB7 /* EWProxyFrameBufferDriver.cpp */; settings = {ATTRIBUTES = (); }; };
 		4420CE60234F413300AB9159 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4420CE5E234F413300AB9159 /* Images.xcassets */; };
 		4420CE63234F428800AB9159 /* MenuBarApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4420CE61234F428800AB9159 /* MenuBarApp.xib */; };
@@ -38,12 +37,13 @@
 		96614DAE10E92DCA0066624E /* EWProxyFrameBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96614D9F10E92D7D0066624E /* EWProxyFrameBuffer.m */; };
 		96614DB610E92E050066624E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DB510E92E050066624E /* IOKit.framework */; };
 		96614E0B10E9307A0066624E /* EWProxyFrameBufferConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DA810E92DB70066624E /* EWProxyFrameBufferConnection.framework */; };
-		96614E0F10E9309A0066624E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96614DFD10E930410066624E /* main.m */; };
+		96614E0F10E9309A0066624E /* app/main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96614DFD10E930410066624E /* app/main.m */; };
 		96614E1310E930D00066624E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E1210E930D00066624E /* AppKit.framework */; };
 		96614E1510E930D00066624E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E1410E930D00066624E /* Cocoa.framework */; };
 		96614E2110E931040066624E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E2010E931040066624E /* Foundation.framework */; };
 		96614E2B10E931260066624E /* EWProxyFrameBufferConnection.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DA810E92DB70066624E /* EWProxyFrameBufferConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		96614E7510E933640066624E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DB510E92E050066624E /* IOKit.framework */; };
+		E79AEB54287D2854003E25DA /* EWProxyFramebuffer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E79AEB53287D2854003E25DA /* EWProxyFramebuffer-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,28 +92,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/EWProxyFramebuffer-InfoPlist.strings"; sourceTree = "<group>"; };
-		1A224C3EFF42367911CA2CB7 /* EWProxyFrameBufferDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWProxyFrameBufferDriver.h; sourceTree = "<group>"; };
-		1A224C3FFF42367911CA2CB7 /* EWProxyFrameBufferDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EWProxyFrameBufferDriver.cpp; sourceTree = "<group>"; };
-		32D94FCF0562CBF700B6AF17 /* EWProxyFramebuffer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EWProxyFramebuffer-Info.plist"; sourceTree = "<group>"; };
+		1A224C3EFF42367911CA2CB7 /* EWProxyFrameBufferDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWProxyFrameBufferDriver.h; path = kext/EWProxyFrameBufferDriver.h; sourceTree = SOURCE_ROOT; };
+		1A224C3FFF42367911CA2CB7 /* EWProxyFrameBufferDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EWProxyFrameBufferDriver.cpp; path = kext/EWProxyFrameBufferDriver.cpp; sourceTree = SOURCE_ROOT; };
 		32D94FD00562CBF700B6AF17 /* EWProxyFrameBuffer.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWProxyFrameBuffer.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		4420CE5F234F413300AB9159 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = English; path = English.lproj/Images.xcassets; sourceTree = "<group>"; };
 		4420CE62234F428800AB9159 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MenuBarApp.xib; sourceTree = "<group>"; };
-		4420CE64234F42C500AB9159 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4420CE66234F42D800AB9159 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4420CE64234F42C500AB9159 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = app/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		4420CE66234F42D800AB9159 /* app/AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = app/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
-		96614CBE10E919F30066624E /* EWProxyFrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWProxyFrameBuffer.h; sourceTree = "<group>"; };
-		96614CC110E91A270066624E /* EWProxyFrameBufferClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWProxyFrameBufferClient.h; sourceTree = "<group>"; };
-		96614CC210E91A270066624E /* EWProxyFrameBufferClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EWProxyFrameBufferClient.cpp; sourceTree = "<group>"; };
-		96614CC310E91A270066624E /* EWProxyFrameBufferFBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWProxyFrameBufferFBuffer.h; sourceTree = "<group>"; };
-		96614CC410E91A270066624E /* EWProxyFrameBufferFBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EWProxyFrameBufferFBuffer.cpp; sourceTree = "<group>"; };
+		96614CBE10E919F30066624E /* EWProxyFrameBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWProxyFrameBuffer.h; path = framework/EWProxyFrameBuffer.h; sourceTree = "<group>"; };
+		96614CC110E91A270066624E /* EWProxyFrameBufferClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWProxyFrameBufferClient.h; path = kext/EWProxyFrameBufferClient.h; sourceTree = SOURCE_ROOT; };
+		96614CC210E91A270066624E /* EWProxyFrameBufferClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EWProxyFrameBufferClient.cpp; path = kext/EWProxyFrameBufferClient.cpp; sourceTree = SOURCE_ROOT; };
+		96614CC310E91A270066624E /* EWProxyFrameBufferFBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EWProxyFrameBufferFBuffer.h; path = kext/EWProxyFrameBufferFBuffer.h; sourceTree = SOURCE_ROOT; };
+		96614CC410E91A270066624E /* EWProxyFrameBufferFBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EWProxyFrameBufferFBuffer.cpp; path = kext/EWProxyFrameBufferFBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		96614D1610E91E6D0066624E /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IOKit; sourceTree = "<group>"; };
-		96614D9F10E92D7D0066624E /* EWProxyFrameBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWProxyFrameBuffer.m; sourceTree = "<group>"; };
+		96614D9F10E92D7D0066624E /* EWProxyFrameBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EWProxyFrameBuffer.m; path = framework/EWProxyFrameBuffer.m; sourceTree = "<group>"; };
 		96614DA810E92DB70066624E /* EWProxyFrameBufferConnection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EWProxyFrameBufferConnection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96614DA910E92DB70066624E /* EWProxyFrameBufferConnection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EWProxyFrameBufferConnection-Info.plist"; sourceTree = "<group>"; };
+		96614DA910E92DB70066624E /* EWProxyFrameBufferConnection-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EWProxyFrameBufferConnection-Info.plist"; path = "framework/EWProxyFrameBufferConnection-Info.plist"; sourceTree = "<group>"; };
 		96614DB510E92E050066624E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		96614DFD10E930410066624E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		96614DFE10E9304C0066624E /* EWProxyframeBufferApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EWProxyframeBufferApp-Info.plist"; sourceTree = "<group>"; };
+		96614DFD10E930410066624E /* app/main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = app/main.m; sourceTree = "<group>"; };
+		96614DFE10E9304C0066624E /* EWProxyframeBufferApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "EWProxyframeBufferApp-Info.plist"; path = "app/EWProxyframeBufferApp-Info.plist"; sourceTree = "<group>"; };
 		96614E0510E930720066624E /* EWProxyframeBufferApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EWProxyframeBufferApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96614E1210E930D00066624E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		96614E1410E930D00066624E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -121,6 +119,7 @@
 		966A60D410F880060054EA7B /* APPLE_LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APPLE_LICENSE; sourceTree = "<group>"; };
 		966A60D510F880060054EA7B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		966A60D610F880060054EA7B /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		E79AEB53287D2854003E25DA /* EWProxyFramebuffer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "EWProxyFramebuffer-Info.plist"; path = "kext/EWProxyFramebuffer-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +171,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32D94FCF0562CBF700B6AF17 /* EWProxyFramebuffer-Info.plist */,
-				089C167DFE841241C02AAC07 /* EWProxyFramebuffer-InfoPlist.strings */,
+				E79AEB53287D2854003E25DA /* EWProxyFramebuffer-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -199,6 +197,7 @@
 				1A224C3FFF42367911CA2CB7 /* EWProxyFrameBufferDriver.cpp */,
 			);
 			name = Source;
+			path = kext;
 			sourceTree = "<group>";
 		};
 		96614C9810E9040C0066624E /* Kext */ = {
@@ -239,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				4420CE64234F42C500AB9159 /* AppDelegate.m */,
-				4420CE66234F42D800AB9159 /* AppDelegate.h */,
+				4420CE66234F42D800AB9159 /* app/AppDelegate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -247,7 +246,7 @@
 		96614DF910E930170066624E /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				96614DFD10E930410066624E /* main.m */,
+				96614DFD10E930410066624E /* app/main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -352,7 +351,7 @@
 				LastUpgradeCheck = 1010;
 			};
 			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "EWProxyFrameBuffer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -376,8 +375,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D94FC80562CBF700B6AF17 /* EWProxyFramebuffer-InfoPlist.strings in Resources */,
 				96614D1B10E91E6D0066624E /* IOKit in Resources */,
+				E79AEB54287D2854003E25DA /* EWProxyFramebuffer-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96614E0F10E9309A0066624E /* main.m in Sources */,
+				96614E0F10E9309A0066624E /* app/main.m in Sources */,
 				4420CE65234F42C500AB9159 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,14 +462,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		089C167DFE841241C02AAC07 /* EWProxyFramebuffer-InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C167EFE841241C02AAC07 /* English */,
-			);
-			name = "EWProxyFramebuffer-InfoPlist.strings";
-			sourceTree = "<group>";
-		};
 		4420CE5E234F413300AB9159 /* Images.xcassets */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -498,13 +489,14 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TAMSR5LM95;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
-				INFOPLIST_FILE = "EWProxyFramebuffer-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				INFOPLIST_FILE = "$(SRCROOT)/kext/EWProxyFramebuffer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULE_NAME = com.yourcompany.driver.EWProxyFrameBuffer;
 				MODULE_VERSION = 1.0.0d1;
 				ONLY_ACTIVE_ARCH = NO;
@@ -522,11 +514,12 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TAMSR5LM95;
 				GCC_MODEL_TUNING = G5;
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
-				INFOPLIST_FILE = "EWProxyFramebuffer-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				INFOPLIST_FILE = "$(SRCROOT)/kext/EWProxyFramebuffer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULE_NAME = com.yourcompany.driver.EWProxyFrameBuffer;
 				MODULE_VERSION = 1.0.0d1;
 				PRODUCT_BUNDLE_IDENTIFIER = info.ennowelbers.framebuffer;
@@ -558,7 +551,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -593,7 +585,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -611,6 +602,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -619,10 +611,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "EWProxyFrameBufferConnection-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/framework/EWProxyFrameBufferConnection-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -648,9 +640,10 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "EWProxyFrameBufferConnection-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/framework/EWProxyFrameBufferConnection-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -668,16 +661,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "EWProxyframeBufferApp-Info.plist";
+				INFOPLIST_FILE = "app/EWProxyframeBufferApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -693,15 +690,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "EWProxyframeBufferApp-Info.plist";
+				INFOPLIST_FILE = "app/EWProxyframeBufferApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
