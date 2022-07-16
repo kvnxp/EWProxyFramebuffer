@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96614E0410E930720066624E"
-               BuildableName = "EWProxyframeBufferApp.app"
-               BlueprintName = "EWProxyframeBufferApp"
-               ReferencedContainer = "container:EWProxyFrameBuffer.xcodeproj">
+               BlueprintIdentifier = "96614E9C10E93A820066624E"
+               BuildableName = "All"
+               BlueprintName = "All"
+               ReferencedContainer = "container:ProxyFrameBuffer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96614E0410E930720066624E"
-            BuildableName = "EWProxyframeBufferApp.app"
-            BlueprintName = "EWProxyframeBufferApp"
-            ReferencedContainer = "container:EWProxyFrameBuffer.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Release"
@@ -58,11 +47,9 @@
             BlueprintIdentifier = "96614E0410E930720066624E"
             BuildableName = "EWProxyframeBufferApp.app"
             BlueprintName = "EWProxyframeBufferApp"
-            ReferencedContainer = "container:EWProxyFrameBuffer.xcodeproj">
+            ReferencedContainer = "container:ProxyFrameBuffer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -70,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96614E0410E930720066624E"
-            BuildableName = "EWProxyframeBufferApp.app"
-            BlueprintName = "EWProxyframeBufferApp"
-            ReferencedContainer = "container:EWProxyFrameBuffer.xcodeproj">
+            BlueprintIdentifier = "96614E9C10E93A820066624E"
+            BuildableName = "All"
+            BlueprintName = "All"
+            ReferencedContainer = "container:ProxyFrameBuffer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
