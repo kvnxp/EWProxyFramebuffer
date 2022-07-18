@@ -649,21 +649,9 @@
             </items>
             <point key="canvasLocation" x="129" y="140"/>
         </menu>
-        <window title="MenuBarApp" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="371">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
-            <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-            <point key="canvasLocation" x="140" y="411"/>
-        </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
                 <outlet property="menu" destination="Aae-oF-AsY" id="uyG-wr-ZTJ"/>
-                <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
@@ -718,6 +706,12 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="ZRf-ty-oV4"/>
+                <menuItem title="VNC Settings" id="TJ3-jn-Fz8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="A2n-B8-hnp" id="pwt-OV-mLW"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="MTY-xM-R0q">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -725,7 +719,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-38" y="20"/>
+            <point key="canvasLocation" x="-38.5" y="30.5"/>
         </menu>
         <menuItem title="Toggle" id="eIK-BM-SQ0">
             <modifierMask key="keyEquivalentModifierMask"/>
@@ -733,6 +727,530 @@
                 <action selector="SwitchDriver:" target="494" id="hgK-Dq-gjT"/>
             </connections>
         </menuItem>
+        <window title="VNC Server Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Preferences" animationBehavior="default" id="A2n-B8-hnp">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="601" y="672" width="434" height="348"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <value key="minSize" type="size" width="127" height="5"/>
+            <view key="contentView" id="dV6-fQ-kgV">
+                <rect key="frame" x="0.0" y="0.0" width="434" height="348"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-hk-Dhq">
+                        <rect key="frame" x="-10" y="30" width="452" height="312"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Connection" identifier="" id="z4k-Vb-viq">
+                                <view key="view" id="b2d-Qe-s4O">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="121" translatesAutoresizingMaskIntoConstraints="NO" id="6uR-gd-gkh">
+                                            <rect key="frame" x="17" y="195" width="125" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Number:" id="vaa-gd-pFl">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="46" translatesAutoresizingMaskIntoConstraints="NO" id="10K-wr-sHT">
+                                            <rect key="frame" x="273" y="197" width="50" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Port:" id="Ti8-qI-teX">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-BG-yPS">
+                                            <rect key="frame" x="144" y="191" width="94" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Display Number for VNC Server
+Note: This number+5900 is the port that will be used</string>
+                                            <popUpButtonCell key="cell" type="push" title="Auto" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="qnQ-F7-TZf" id="R1k-w5-4wH">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" title="OtherViews" id="sdv-50-a3q">
+                                                    <items>
+                                                        <menuItem title="Auto" state="on" id="qnQ-F7-TZf"/>
+                                                        <menuItem title="0" tag="5900" id="guV-H3-J0x"/>
+                                                        <menuItem title="1" tag="5901" id="thq-Eg-xQc"/>
+                                                        <menuItem title="2" tag="5902" id="9qE-0D-iqR"/>
+                                                        <menuItem title="3" tag="5903" id="RaJ-Jv-cjp"/>
+                                                        <menuItem title="4" tag="5904" id="3cw-66-Ftr"/>
+                                                        <menuItem title="5" tag="5905" id="4CB-YX-1fo"/>
+                                                        <menuItem title="6" tag="5906" id="p0f-6R-gW2"/>
+                                                        <menuItem title="7" tag="5907" id="7c4-jn-Ifx"/>
+                                                        <menuItem title="8" tag="5908" id="axM-hD-7mw"/>
+                                                        <menuItem title="9" tag="5909" id="c6V-v1-yLu"/>
+                                                        <menuItem title="--" tag="99" id="lZg-Wx-9tR"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hct-WC-tyj">
+                                            <rect key="frame" x="328" y="194" width="64" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Port Number that VNC will use to  communicate.
+Note: Same as Display Number+5900
+Note: Same as Display Number+5900</string>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="7Hj-Po-gAg">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="fjX-Dg-11i">
+                                            <rect key="frame" x="38" y="223" width="104" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display Name:" id="O3w-XY-iQ4">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField toolTip="Name that the VNC viewer will see for this server." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dr9-mB-m94">
+                                            <rect key="frame" x="147" y="224" width="245" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="Mac OS X" drawsBackground="YES" id="8lG-z2-K0f">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box fixedFrame="YES" title="Authentication" translatesAutoresizingMaskIntoConstraints="NO" id="T5N-kx-SVH">
+                                            <rect key="frame" x="29" y="54" width="366" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="5dd-0t-1g5">
+                                                <rect key="frame" x="3" y="3" width="360" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnd-Fh-H2y">
+                                                        <rect key="frame" x="161" y="71" width="86" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <string key="toolTip">Password required to connect with VNC Clients
+Note: Password length is not preserved</string>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" drawsBackground="YES" id="vFs-fV-SxX">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-TJ-pmp">
+                                                        <rect key="frame" x="27" y="53" width="134" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="134" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Hyn-bw-tIf">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="VNC Password" imagePosition="left" alignment="left" state="on" toolTip="Password required to connect with VNC Client" tag="1" inset="2" id="9yU-NL-aeP">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="None" imagePosition="left" alignment="left" tag="2" inset="2" id="UZV-t9-HCp">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-hC-aLK">
+                                                        <rect key="frame" x="27" y="8" width="379" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Require Remote Login (SSH)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="HiN-vg-BUH">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="initialFirstResponder" destination="dr9-mB-m94" id="Iu5-ot-d11"/>
+                                </connections>
+                            </tabViewItem>
+                            <tabViewItem label="Device" identifier="" id="ZfD-CC-Nlp">
+                                <view key="view" id="1dk-Ks-nvq">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box fixedFrame="YES" title="Mouse" translatesAutoresizingMaskIntoConstraints="NO" id="LnQ-SD-LL3">
+                                            <rect key="frame" x="19" y="109" width="392" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <string key="toolTip">Checking this box swaps the middle and right mouse buttons.  By convention the buttons sent by VNC client is in the opposite order as Mac OS X buttons.</string>
+                                            <view key="contentView" id="wKl-iX-A1K">
+                                                <rect key="frame" x="3" y="3" width="386" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZA-Ht-2IR">
+                                                        <rect key="frame" x="12" y="7" width="206" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Swap Mouse Buttons 2 and 3" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="prK-6T-OCt">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box fixedFrame="YES" title="Display" translatesAutoresizingMaskIntoConstraints="NO" id="YfP-5H-PpA">
+                                            <rect key="frame" x="19" y="162" width="392" height="98"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="k65-uX-HP7">
+                                                <rect key="frame" x="3" y="3" width="386" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USG-cp-wwz">
+                                                        <rect key="frame" x="12" y="51" width="175" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <string key="toolTip">Enable this if you want to allow the machine to sleep.
+Sleeping machines can not be reached by VNC.</string>
+                                                        <buttonCell key="cell" type="check" title="Allow machine to sleep" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="eLq-Cx-e6M">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAl-Cn-FZb">
+                                                        <rect key="frame" x="12" y="31" width="181" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <string key="toolTip">Enable this to prevent the screen from dimming while clients are connected.
+Any Input will un-dim the screen.</string>
+                                                        <buttonCell key="cell" type="check" title="Allow display dimming" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="JRK-jo-5L6">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button toolTip="Enable this to allow the screen saver to turn on when clients are connected." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnD-XU-sR7">
+                                                        <rect key="frame" x="12" y="11" width="200" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Allow screen saver to start" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="HbL-dq-vOV">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box toolTip="The keyboard layout that Vine Server uses to interpret keystrokes from a VNC viewer." fixedFrame="YES" title="Keyboard (Mac OS X 10.4 and later)" translatesAutoresizingMaskIntoConstraints="NO" id="Dey-5y-Gvh">
+                                            <rect key="frame" x="19" y="44" width="392" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <view key="contentView" id="mqo-G6-FyT">
+                                                <rect key="frame" x="3" y="3" width="386" height="43"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="The keyboard layout that Vine Server uses to interpret keystrokes from a VNC viewer." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRc-ko-8l4">
+                                                        <rect key="frame" x="156" y="9" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="U.S." bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="s3J-de-Bkb" id="Fxr-xj-O4y">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="9k2-3P-KKd">
+                                                                <items>
+                                                                    <menuItem title="U.S." state="on" id="s3J-de-Bkb"/>
+                                                                    <menuItem title="Unicode Hex Input" tag="2" id="2md-Q1-LoK"/>
+                                                                    <menuItem title="Current Keyboard" tag="1" id="xGF-he-ISM"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="110" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-T1-xou">
+                                                        <rect key="frame" x="13" y="15" width="114" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Keyboard Layout:" id="wNX-OG-ADZ">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Sharing" identifier="" id="Sx6-Iq-LvX">
+                                <view key="view" id="pbn-v7-761">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box toolTip="This section controls how multiple VNC clients share the screen" fixedFrame="YES" title="Server Sharing" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-pt-9mU">
+                                            <rect key="frame" x="19" y="37" width="392" height="123"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="crD-kM-C2z">
+                                                <rect key="frame" x="3" y="3" width="386" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-tE-5UB">
+                                                        <rect key="frame" x="14" y="34" width="350" height="59"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        <size key="cellSize" width="350" height="18"/>
+                                                        <size key="intercellSpacing" width="4" height="2"/>
+                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="H31-k0-XU5">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <cells>
+                                                            <column>
+                                                                <buttonCell type="radio" title="Always allow multiple VNC connections" bezelStyle="regularSquare" imagePosition="left" alignment="left" toolTip="Always allow multiple VNC clients" tag="1" inset="2" id="bIK-5S-10i">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Let viewers request exclusive access" imagePosition="left" alignment="left" state="on" toolTip="Allow client to specify if it will work while other VNC clients are connected." inset="2" id="T5u-kp-v2P">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <buttonCell type="radio" title="Allow only one VNC connection at a time" bezelStyle="regularSquare" imagePosition="left" alignment="left" toolTip="Never allow multiple VNC clients" tag="2" inset="2" id="vLe-Vh-k5y">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                            </column>
+                                                        </cells>
+                                                    </matrix>
+                                                    <button toolTip="Checking this box means the new client is denied access.  Unchecking it means the existing client is disconnected." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUQ-Yq-qTb">
+                                                        <rect key="frame" x="29" y="12" width="353" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <buttonCell key="cell" type="check" title="Keep existing viewer if a new viewer tries to connect" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="tlp-rc-1gM">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </box>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzH-Bh-WPg">
+                                            <rect key="frame" x="23" y="230" width="378" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Disable remote control of keyboard and mouse" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="08T-Ve-RGd">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzO-DV-SR0">
+                                            <rect key="frame" x="23" y="190" width="278" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Advertise server via Bonjour" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="sws-6T-Z8M">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toT-NR-Myq">
+                                            <rect key="frame" x="23" y="210" width="333" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Disable rich clipboard support (Vine Viewer Only)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Muu-g6-DFx">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Startup" identifier="" id="Uy1-Qh-8zK">
+                                <view key="view" id="RuF-5i-58e">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-YM-okv">
+                                            <rect key="frame" x="18" y="230" width="383" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Start server when Vine Server application is launched" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="xvy-Ag-bq0">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3hA-ue-c0d">
+                                            <rect key="frame" x="18" y="190" width="383" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Restart server if it stops unexpectedly" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="8U9-Br-j9A">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFe-oU-eyw">
+                                            <rect key="frame" x="18" y="210" width="389" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Stop server on a fast user switch" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="61V-I1-xmJ">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8p9-FF-r6H">
+                                            <rect key="frame" x="14" y="104" width="196" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <buttonCell key="cell" type="push" title="System Server..." bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="uW9-qh-8iq">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Advanced" identifier="" id="Yv8-8h-Dmf">
+                                <view key="view" id="ohu-pO-iq6">
+                                    <rect key="frame" x="10" y="33" width="432" height="266"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box toolTip="The event taps that Vine Server uses to interpret keystrokes from a VNC viewer." fixedFrame="YES" title="Keyboard" translatesAutoresizingMaskIntoConstraints="NO" id="wpr-r1-Itp">
+                                            <rect key="frame" x="19" y="19" width="403" height="86"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <view key="contentView" id="dTM-sK-k7X">
+                                                <rect key="frame" x="3" y="3" width="397" height="68"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="The OS level at which Vine Server interprets keyboard input from a VNC viewer." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOz-Tg-c6q">
+                                                        <rect key="frame" x="166" y="35" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="Smart Event Management" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="3" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="1Fv-wH-17j" id="GIK-Xd-EX2">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="UfO-nB-s1v">
+                                                                <items>
+                                                                    <menuItem title="Smart Event Management" state="on" tag="3" id="1Fv-wH-17j"/>
+                                                                    <menuItem title="Hardware Events " id="NSw-iV-83R"/>
+                                                                    <menuItem title="User Session Events" tag="1" id="GZk-Nz-44b"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="RBy-nd-j7X">
+                                                        <rect key="frame" x="16" y="41" width="121" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Keyboard Events:" id="vN5-Nn-ag8">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <popUpButton toolTip="The OS level at which Vine Server interprets keyboard input from a VNC viewer." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-6V-TrA">
+                                                        <rect key="frame" x="166" y="9" width="219" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <popUpButtonCell key="cell" type="push" title="HID Event Source" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="UBT-9I-fqc" id="kht-q9-fg4">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="GVq-WG-Lgq">
+                                                                <items>
+                                                                    <menuItem title="Private Event Source" tag="2" id="91a-Wi-oxv"/>
+                                                                    <menuItem title="Combined Event Source" tag="1" id="xTn-hl-hzA"/>
+                                                                    <menuItem title="HID Event Source" state="on" id="UBT-9I-fqc"/>
+                                                                    <menuItem title="10.3 API (No Source)" tag="3" id="7b7-fi-8ab"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                    </popUpButton>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-ae-wkE">
+                                                        <rect key="frame" x="16" y="15" width="121" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Event Source:" id="3BH-WF-ACi">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box fixedFrame="YES" borderType="line" title="RFB Protocol" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-sL-5HA">
+                                            <rect key="frame" x="19" y="200" width="162" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView" id="286-1Q-o6m">
+                                                <rect key="frame" x="3" y="3" width="156" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <popUpButton toolTip="Select to force the server to use an older protocol." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqi-Or-EY3">
+                                                        <rect key="frame" x="15" y="10" width="126" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                        <popUpButtonCell key="cell" type="push" title="Default (3.8)" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="rxr-Qr-CBb" id="bk4-jT-TAF">
+                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="menu"/>
+                                                            <menu key="menu" title="OtherViews" id="MwI-We-its">
+                                                                <items>
+                                                                    <menuItem title="Default (3.8)" state="on" id="rxr-Qr-CBb"/>
+                                                                    <menuItem title="3.7" id="E43-Hg-WIn"/>
+                                                                    <menuItem title="3.3" id="IT8-ZJ-UkG"/>
+                                                                </items>
+                                                            </menu>
+                                                        </popUpButtonCell>
+                                                    </popUpButton>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                        <box fixedFrame="YES" borderType="line" title="Command Line Arguments" translatesAutoresizingMaskIntoConstraints="NO" id="LAU-Pe-1Z2">
+                                            <rect key="frame" x="19" y="116" width="404" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView" id="vTC-4O-aU8">
+                                                <rect key="frame" x="3" y="3" width="398" height="62"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecf-7P-b84">
+                                                        <rect key="frame" x="22" y="23" width="354" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wOT-TJ-MSW">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                            </view>
+                                        </box>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" preferredMaxLayoutWidth="396" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-fn-c06">
+                        <rect key="frame" x="17" y="15" width="400" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Preference Message" id="w4I-KM-Nmy">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="kGL-We-sgu">
+                        <rect key="frame" x="326" y="5" width="96" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Start VNC" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Rl-O6-EQp">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="startVnc:" target="TeT-Ts-pTC" id="fGb-Mj-k0d"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="5ml-Ha-uzI">
+                        <rect key="frame" x="221" y="5" width="94" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Stop VNC" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HOx-wZ-WW8">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="327" y="-72"/>
+        </window>
+        <customObject id="TeT-Ts-pTC" customClass="vncServerController" customModule="EWProxyframeBufferApp" customModuleProvider="target">
+            <connections>
+                <outlet property="StartVNCButton" destination="kGL-We-sgu" id="fzd-TZ-HTz"/>
+                <outlet property="referenteMenssaje" destination="5eX-fn-c06" id="Pl7-z9-Aqn"/>
+            </connections>
+        </customObject>
     </objects>
     <resources>
         <image name="Check Off" width="16" height="16"/>

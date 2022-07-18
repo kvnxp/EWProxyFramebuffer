@@ -37,8 +37,11 @@
 		96614E1310E930D00066624E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E1210E930D00066624E /* AppKit.framework */; };
 		96614E1510E930D00066624E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E1410E930D00066624E /* Cocoa.framework */; };
 		96614E2110E931040066624E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614E2010E931040066624E /* Foundation.framework */; };
-		96614E2B10E931260066624E /* EWProxyFrameBufferConnection.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DA810E92DB70066624E /* EWProxyFrameBufferConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		96614E2B10E931260066624E /* EWProxyFrameBufferConnection.framework in Copy Frameworks (3 items) */ = {isa = PBXBuildFile; fileRef = 96614DA810E92DB70066624E /* EWProxyFrameBufferConnection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		96614E7510E933640066624E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96614DB510E92E050066624E /* IOKit.framework */; };
+		E73923022884BA7F007BD3C6 /* storepasswd in Resources */ = {isa = PBXBuildFile; fileRef = E73923002884BA7E007BD3C6 /* storepasswd */; };
+		E73923032884BA7F007BD3C6 /* OSXvnc-server in Resources */ = {isa = PBXBuildFile; fileRef = E73923012884BA7F007BD3C6 /* OSXvnc-server */; };
+		E73A9A2728848FF300D288A0 /* vncServerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A9A2628848FF200D288A0 /* vncServerController.swift */; };
 		E748F8262882742400F3174B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E748F8242882742400F3174B /* main.m */; };
 		E748F8272882742400F3174B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E748F8252882742400F3174B /* AppDelegate.m */; };
 		E748F82E2882744100F3174B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E748F8282882744000F3174B /* Images.xcassets */; };
@@ -79,15 +82,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		96614E3210E931340066624E /* Copy Frameworks */ = {
+		96614E3210E931340066624E /* Copy Frameworks (3 items) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96614E2B10E931260066624E /* EWProxyFrameBufferConnection.framework in Copy Frameworks */,
+				96614E2B10E931260066624E /* EWProxyFrameBufferConnection.framework in Copy Frameworks (3 items) */,
 			);
-			name = "Copy Frameworks";
+			name = "Copy Frameworks (3 items)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -114,6 +117,10 @@
 		966A60D410F880060054EA7B /* APPLE_LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APPLE_LICENSE; sourceTree = "<group>"; };
 		966A60D510F880060054EA7B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		966A60D610F880060054EA7B /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		E73923002884BA7E007BD3C6 /* storepasswd */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = storepasswd; sourceTree = "<group>"; };
+		E73923012884BA7F007BD3C6 /* OSXvnc-server */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "OSXvnc-server"; sourceTree = "<group>"; };
+		E73A9A2528848FF200D288A0 /* EWProxyframeBufferApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EWProxyframeBufferApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E73A9A2628848FF200D288A0 /* vncServerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vncServerController.swift; sourceTree = "<group>"; };
 		E748F8232882742400F3174B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E748F8242882742400F3174B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E748F8252882742400F3174B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +232,7 @@
 		96614DF610E92FEC0066624E /* ProxyFrameBufferApp */ = {
 			isa = PBXGroup;
 			children = (
+				E73A9A2428848FC800D288A0 /* vnc */,
 				96614E2010E931040066624E /* Foundation.framework */,
 				96614E1210E930D00066624E /* AppKit.framework */,
 				96614E1410E930D00066624E /* Cocoa.framework */,
@@ -248,11 +256,22 @@
 		96614DFA10E9301D0066624E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E73923012884BA7F007BD3C6 /* OSXvnc-server */,
+				E73923002884BA7E007BD3C6 /* storepasswd */,
 				E748F8282882744000F3174B /* Images.xcassets */,
 				E748F82C2882744100F3174B /* MainMenu.xib */,
 				E748F82A2882744100F3174B /* MenuBarApp.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E73A9A2428848FC800D288A0 /* vnc */ = {
+			isa = PBXGroup;
+			children = (
+				E73A9A2628848FF200D288A0 /* vncServerController.swift */,
+				E73A9A2528848FF200D288A0 /* EWProxyframeBufferApp-Bridging-Header.h */,
+			);
+			path = vnc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +343,7 @@
 				96614E0110E930720066624E /* Resources */,
 				96614E0210E930720066624E /* Sources */,
 				96614E0310E930720066624E /* Frameworks */,
-				96614E3210E931340066624E /* Copy Frameworks */,
+				96614E3210E931340066624E /* Copy Frameworks (3 items) */,
 			);
 			buildRules = (
 			);
@@ -343,6 +362,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					96614E0410E930720066624E = {
+						LastSwiftMigration = 1320;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "ProxyFrameBuffer" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -387,7 +411,9 @@
 			files = (
 				E748F82F2882744100F3174B /* MenuBarApp.xib in Resources */,
 				E748F82E2882744100F3174B /* Images.xcassets in Resources */,
+				E73923022884BA7F007BD3C6 /* storepasswd in Resources */,
 				E748F8302882744100F3174B /* MainMenu.xib in Resources */,
+				E73923032884BA7F007BD3C6 /* OSXvnc-server in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +454,7 @@
 			files = (
 				E748F8272882742400F3174B /* AppDelegate.m in Sources */,
 				E748F8262882742400F3174B /* main.m in Sources */,
+				E73A9A2728848FF300D288A0 /* vncServerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -595,6 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -666,9 +695,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -676,6 +707,10 @@
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "app/EWProxyframeBufferApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -686,6 +721,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = EWProxyframeBufferApp;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "app/vnc/EWProxyframeBufferApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -695,14 +734,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "app/EWProxyframeBufferApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -713,6 +758,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = EWProxyframeBufferApp;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "app/vnc/EWProxyframeBufferApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				ZERO_LINK = NO;
 			};
 			name = Release;

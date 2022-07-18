@@ -158,7 +158,8 @@
     EWProxyFramebufferDriverEnableFramebuffer(connect, tagg);
    
 }
- 
+
+
 - (IBAction) SwitchDriver:(id)sender
 {
     [self SwitchDriverOff: sender];
@@ -182,3 +183,4 @@
 //}
 
 @end
+
